@@ -1,0 +1,75 @@
+<div class="text-layout">
+    <h1> Pipes Basicos </h1>
+    <p> 
+        Pipes incluidos en Angular. Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="uppercase"
+                [subheader]="nombreLowwer">
+            {{ nombreLowwer | uppercase }}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="lowercase"
+                [subheader]="nombreUpper">
+            {{ nombreUpper | lowercase }}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="titlecase"
+                [subheader]="nombreCompleto">
+            {{ nombreCompleto | titlecase }}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1> Date | Fecha | Pipe </h1>
+    <p> 
+        Pipe para mostrar la fecha
+    </p>
+</div>
+
+
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li> fecha </li>
+                <li> fecha | date </li>
+                <li> fecha | date:'short' </li>
+                <li> fecha | date:'long' </li>
+                <li> fecha | date:'EEEE, MMMM d, y' </li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li> fecha | date:'long':GMT-6 </li>
+                <li> fecha | date:'long':'GMT-6':'fr' </li>
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li> {{ fecha }} </li>
+                <li> {{ ( fecha | date ) | titlecase }} </li>
+                <li> {{ ( fecha | date:'short' ) | titlecase }} </li>
+                <li> {{ ( fecha | date:'long' ) | titlecase }} </li>
+                <li> {{ ( fecha | date:'EEEE, MMMM d, y' ) | titlecase }} </li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li> {{ fecha | date:'long':'GMT-6' }} </li>
+                <li> {{ fecha | date:'long':'GMT-6':'fr' }} </li>
+            </ul>
+        </p-card> 
+    </div>
+</div>
